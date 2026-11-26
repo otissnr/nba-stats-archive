@@ -215,42 +215,6 @@ a {
 
 /* SEASON CARDS */
 
-.season-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-}
-
-.season-card {
-    min-height: 115px;
-    padding: 22px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    transition: 0.2s;
-    cursor: pointer;
-}
-
-.season-card span {
-    font-size: 21px;
-    font-weight: 750;
-}
-
-.season-card small {
-    color: var(--muted);
-    font-size: 11px;
-}
-
-.season-card:hover {
-    border-color: var(--orange);
-    background: var(--surface-light);
-    transform: translateY(-4px);
-}
-
 /* FEATURE CARDS */
 
 .feature-section {
@@ -324,7 +288,6 @@ footer p + p {
         white-space: nowrap;
     }
 
-    .season-grid,
     .feature-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -374,22 +337,319 @@ footer p + p {
         font-size: 25px;
     }
 
-    .season-grid,
     .feature-grid {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
 
-    .season-card {
-        min-height: 95px;
-        padding: 15px;
-    }
-
-    .season-card span {
-        font-size: 17px;
-    }
-
     .feature-card {
         padding: 17px;
+    }
+}
+/* WEEKLY NBA DASHBOARD */
+
+.dashboard-section {
+    background: linear-gradient(180deg, #0b1120, #101b2e);
+}
+
+.live-indicator {
+    color: #72d69a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.dashboard-status {
+    color: var(--muted);
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.dashboard-status.error {
+    color: #ff9999;
+}
+
+.weekly-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.weekly-stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.weekly-stat-label {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.weekly-stat-card strong {
+    color: var(--orange-light);
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.dashboard-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.dashboard-panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.dashboard-panel-heading h3 {
+    font-size: 18px;
+}
+
+.panel-note {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.leader-tabs {
+    display: flex;
+    gap: 7px;
+}
+
+.leader-tab {
+    background: var(--surface-light);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 13px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.leader-tab:hover,
+.leader-tab.active {
+    background: var(--orange);
+    color: #101827;
+}
+
+.leader-row {
+    display: grid;
+    grid-template-columns: 35px 1fr 65px;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 4px;
+    border-bottom: 1px solid var(--border);
+}
+
+.leader-row:last-child {
+    border-bottom: none;
+}
+
+.leader-rank {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.leader-name {
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.leader-games {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.leader-value {
+    color: var(--orange-light);
+    text-align: right;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.scoring-chart {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 12px;
+    align-items: end;
+    min-height: 190px;
+}
+
+.scoring-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+    height: 190px;
+}
+
+.scoring-bar {
+    width: 100%;
+    max-width: 58px;
+    min-height: 5px;
+    background: linear-gradient(180deg, var(--orange-light), var(--orange));
+    border-radius: 6px 6px 2px 2px;
+}
+
+.scoring-total {
+    color: var(--text);
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.scoring-date {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    text-align: right;
+}
+
+.dashboard-table th {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    padding: 11px 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard-table th:first-child,
+.dashboard-table td:first-child {
+    text-align: left;
+}
+
+.dashboard-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.dashboard-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.team-name {
+    font-weight: 700;
+}
+
+.positive-diff {
+    color: #72d69a;
+    font-weight: 750;
+}
+
+.negative-diff {
+    color: #ff9999;
+    font-weight: 750;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.result-card {
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.result-date {
+    color: var(--muted);
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.result-team {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 5px 0;
+    font-size: 13px;
+}
+
+.result-team.winner {
+    color: var(--orange-light);
+    font-weight: 800;
+}
+
+@media (max-width: 900px) {
+    .weekly-stat-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .weekly-stat-grid {
+        gap: 10px;
+    }
+
+    .weekly-stat-card {
+        padding: 16px;
+    }
+
+    .weekly-stat-card strong {
+        font-size: 24px;
+    }
+
+    .dashboard-panel {
+        padding: 17px;
+    }
+
+    .dashboard-panel-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .leader-tabs {
+        width: 100%;
+    }
+
+    .leader-tab {
+        flex: 1;
+        padding: 8px 5px;
+    }
+
+    .scoring-chart {
+        gap: 5px;
+    }
+
+    .scoring-total {
+        font-size: 9px;
+    }
+
+    .scoring-date {
+        font-size: 9px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
     }
 }

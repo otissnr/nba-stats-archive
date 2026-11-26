@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#101827">
-    <meta name="description" content="A historical NBA statistics archive covering the 2020-21 to 2026-27 seasons.">
+    <meta name="description" content="NBA 2026-27 season statistics, results and weekly insights.">
     <title>NBA Stats Archive</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,72 +15,114 @@
         <span class="brand-icon">🏀</span>
         <div>
             <h1>NBA Stats Archive</h1>
-            <p>Every game. Every season. Every stat.</p>
+            <p>NBA statistics, results and weekly insights.</p>
         </div>
     </div>
 
     <nav class="main-nav">
         <a href="#home" class="active">Home</a>
-        <a href="#games">Games</a>
-        <a href="#players">Players</a>
-        <a href="#teams">Teams</a>
-        <a href="#seasons">Seasons</a>
+        <a href="#weekly-dashboard">Weekly NBA</a>
         <a href="#downloads">Downloads</a>
     </nav>
+
 </header>
 
 <main>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <span class="eyebrow">THE HISTORICAL NBA DATABASE</span>
+            <span class="eyebrow">2026–27 NBA SEASON</span>
             <h2>Explore the game.<br><span>Discover the numbers.</span></h2>
-            <p>A growing archive of NBA games, player performances and team statistics.</p>
-            <a href="#seasons" class="primary-button">Explore the archive</a>
+            <p>Follow the season through results, player performances and team statistics.</p>
         </div>
         <div class="hero-ball">🏀</div>
-    </section>
+        </section>
 
-    <section class="stats-overview">
-        <div class="stat-card">
-            <span class="stat-number">7</span>
-            <span class="stat-label">Seasons</span>
-        </div>
-        <div class="stat-card">
-            <span class="stat-number">30</span>
-            <span class="stat-label">NBA Teams</span>
-        </div>
-        <div class="stat-card">
-            <span class="stat-number">9,500+</span>
-            <span class="stat-label">Games indexed</span>
-        </div>
-        <div class="stat-card">
-            <span class="stat-number">2020–27</span>
-            <span class="stat-label">Season coverage</span>
-        </div>
-    </section>
-
-    <section id="seasons" class="content-section">
+    <section id="weekly-dashboard" class="content-section dashboard-section">
         <div class="section-heading">
             <div>
-                <span class="eyebrow">THE ARCHIVE</span>
-                <h2>Explore by season</h2>
+                <span class="eyebrow">THE LAST SEVEN DAYS</span>
+                <h2>This Week in the NBA</h2>
+                <p id="dashboard-period">Loading weekly statistics...</p>
             </div>
-            <p>Select a season to explore its games, players and teams.</p>
+            <span class="live-indicator">● WEEKLY REPORT</span>
         </div>
 
-        <div class="season-grid" id="season-grid">
-            <div class="season-card"><span>2020–21</span></div>
-            <div class="season-card"><span>2021–22</span></div>
-            <div class="season-card"><span>2022–23</span></div>
-            <div class="season-card"><span>2023–24</span></div>
-            <div class="season-card"><span>2024–25</span></div>
-            <div class="season-card"><span>2025–26</span></div>
-            <div class="season-card"><span>2026–27</span></div>
+        <div id="dashboard-status" class="dashboard-status">
+            Loading dashboard...
+        </div>
+
+        <div id="dashboard-content" hidden>
+            <div class="weekly-stat-grid">
+                <div class="weekly-stat-card">
+                    <span class="weekly-stat-label">Games played</span>
+                    <strong id="weekly-games">0</strong>
+                </div>
+                <div class="weekly-stat-card">
+                    <span class="weekly-stat-label">Total points</span>
+                    <strong id="weekly-points">0</strong>
+                </div>
+                <div class="weekly-stat-card">
+                    <span class="weekly-stat-label">Average points / game</span>
+                    <strong id="weekly-average">0</strong>
+                </div>
+                <div class="weekly-stat-card">
+                    <span class="weekly-stat-label">Players in action</span>
+                    <strong id="weekly-players">0</strong>
+                </div>
+            </div>
+
+            <div class="dashboard-panel">
+                <div class="dashboard-panel-heading">
+                    <h3>Player Leaders</h3>
+                    <div class="leader-tabs">
+                        <button class="leader-tab active" data-stat="points">Points</button>
+                        <button class="leader-tab" data-stat="rebounds">Rebounds</button>
+                        <button class="leader-tab" data-stat="assists">Assists</button>
+                    </div>
+                </div>
+                <div id="player-leaders"></div>
+            </div>
+
+            <div class="dashboard-panel">
+                <div class="dashboard-panel-heading">
+                    <h3>Daily Scoring</h3>
+                </div>
+                <div id="daily-scoring" class="scoring-chart"></div>
+            </div>
+
+            <div class="dashboard-panel">
+                <div class="dashboard-panel-heading">
+                    <h3>Team Form</h3>
+                    <span class="panel-note">Weekly wins and losses</span>
+                </div>
+                <div class="table-scroll">
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>W</th>
+                                <th>L</th>
+                                <th>PF</th>
+                                <th>PA</th>
+                                <th>+/-</th>
+                            </tr>
+                        </thead>
+                        <tbody id="team-form"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="dashboard-panel">
+                <div class="dashboard-panel-heading">
+                    <h3>Latest Results</h3>
+                    <span class="panel-note">Games in this reporting period</span>
+                </div>
+                <div id="latest-results" class="results-grid"></div>
+            </div>
         </div>
     </section>
-
-    <section class="content-section feature-section">
+    <section id="downloads" class="content-section feature-section">
         <div class="section-heading">
             <div>
                 <span class="eyebrow">EXPLORE THE DATA</span>
@@ -89,22 +131,7 @@
         </div>
 
         <div class="feature-grid">
-            <div class="feature-card" id="games">
-                <span class="feature-icon">📊</span>
-                <h3>Game results</h3>
-                <p>Scores, schedules, venues and complete game records.</p>
-            </div>
-            <div class="feature-card" id="players">
-                <span class="feature-icon">🏆</span>
-                <h3>Player statistics</h3>
-                <p>Individual performances, box scores and season leaders.</p>
-            </div>
-            <div class="feature-card" id="teams">
-                <span class="feature-icon">🛡️</span>
-                <h3>Team statistics</h3>
-                <p>Offensive, defensive and team performance data.</p>
-            </div>
-            <div class="feature-card" id="downloads">
+            <div class="feature-card">
 		<span class="feature-icon">📥</span>
     		<h3>Data downloads</h3>
     		<p>Download the complete 2026–27 NBA statistics workbook.</p>
@@ -119,7 +146,8 @@
 </main>
 
 <footer>
-    <p>NBA Stats Archive · Independent historical statistics project</p>
+    <p>NBA Stats Archive · Independent NBA statistics project</p>
+    <p>2026–27 season prototype · Feedback welcome</p>
     <p>Data collected from ESPN public statistics endpoints.</p>
 </footer>
 
