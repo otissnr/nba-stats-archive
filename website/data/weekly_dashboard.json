@@ -1,15 +1,15 @@
 {
   "season": "2026-27",
-  "generated_at": "2026-11-26T16:35:42.046617+11:00",
+  "generated_at": "2026-11-26T17:26:40.659405+11:00",
   "reporting_period": {
     "start": "2026-11-20",
     "end": "2026-11-26",
     "timezone": "Australia/Sydney"
   },
   "summary": {
-    "games_played": 47,
-    "total_points": 10456.0,
-    "average_points_per_game": 222.5,
+    "games_played": 48,
+    "total_points": 10683.0,
+    "average_points_per_game": 222.6,
     "players_in_action": 382
   },
   "games": [
@@ -905,6 +905,25 @@
       "away_score": 110,
       "away_winner": false,
       "local_date": "2026-11-26"
+    },
+    {
+      "game_id": "401909325",
+      "season": 2027,
+      "date": "2026-11-26T03:00Z",
+      "status": "Final",
+      "venue": null,
+      "attendance": null,
+      "home_team_id": "22",
+      "home_team": "Portland Trail Blazers",
+      "home_abbreviation": "POR",
+      "home_score": 116,
+      "home_winner": true,
+      "away_team_id": "24",
+      "away_team": "San Antonio Spurs",
+      "away_abbreviation": "SA",
+      "away_score": 111,
+      "away_winner": false,
+      "local_date": "2026-11-26"
     }
   ],
   "daily_scoring": [
@@ -940,8 +959,8 @@
     },
     {
       "date": "2026-11-26",
-      "games": 8,
-      "total_points": 1741
+      "games": 9,
+      "total_points": 1968
     }
   ],
   "player_leaders": {
@@ -957,6 +976,18 @@
         "assists": 23,
         "steals": 6,
         "blocks": 1
+      },
+      {
+        "player_id": "5104157",
+        "player_name": "Victor Wembanyama",
+        "team": "San Antonio Spurs",
+        "team_abbreviation": "SA",
+        "games": 3,
+        "points": 126,
+        "rebounds": 45,
+        "assists": 7,
+        "steals": 6,
+        "blocks": 8
       },
       {
         "player_id": "4278073",
@@ -995,6 +1026,18 @@
         "blocks": 1
       },
       {
+        "player_id": "6606",
+        "player_name": "Damian Lillard",
+        "team": "Portland Trail Blazers",
+        "team_abbreviation": "POR",
+        "games": 4,
+        "points": 95,
+        "rebounds": 15,
+        "assists": 15,
+        "steals": 3,
+        "blocks": 1
+      },
+      {
         "player_id": "3934672",
         "player_name": "Jalen Brunson",
         "team": "New York Knicks",
@@ -1019,6 +1062,18 @@
         "blocks": 2
       },
       {
+        "player_id": "4845367",
+        "player_name": "Stephon Castle",
+        "team": "San Antonio Spurs",
+        "team_abbreviation": "SA",
+        "games": 4,
+        "points": 88,
+        "rebounds": 23,
+        "assists": 38,
+        "steals": 4,
+        "blocks": 0
+      },
+      {
         "player_id": "3064514",
         "player_name": "Julius Randle",
         "team": "Brooklyn Nets",
@@ -1029,42 +1084,6 @@
         "assists": 13,
         "steals": 3,
         "blocks": 0
-      },
-      {
-        "player_id": "5104157",
-        "player_name": "Victor Wembanyama",
-        "team": "San Antonio Spurs",
-        "team_abbreviation": "SA",
-        "games": 2,
-        "points": 82,
-        "rebounds": 29,
-        "assists": 4,
-        "steals": 5,
-        "blocks": 6
-      },
-      {
-        "player_id": "3112335",
-        "player_name": "Nikola Jokic",
-        "team": "Denver Nuggets",
-        "team_abbreviation": "DEN",
-        "games": 3,
-        "points": 81,
-        "rebounds": 36,
-        "assists": 27,
-        "steals": 2,
-        "blocks": 1
-      },
-      {
-        "player_id": "3155942",
-        "player_name": "Domantas Sabonis",
-        "team": "Sacramento Kings",
-        "team_abbreviation": "SAC",
-        "games": 4,
-        "points": 81,
-        "rebounds": 55,
-        "assists": 19,
-        "steals": 1,
-        "blocks": 1
       }
     ],
     "rebounds": [
@@ -1085,12 +1104,24 @@
         "player_name": "Donovan Clingan",
         "team": "Portland Trail Blazers",
         "team_abbreviation": "POR",
-        "games": 3,
-        "points": 44,
-        "rebounds": 44,
-        "assists": 11,
+        "games": 4,
+        "points": 49,
+        "rebounds": 52,
+        "assists": 13,
         "steals": 2,
-        "blocks": 4
+        "blocks": 5
+      },
+      {
+        "player_id": "5104157",
+        "player_name": "Victor Wembanyama",
+        "team": "San Antonio Spurs",
+        "team_abbreviation": "SA",
+        "games": 3,
+        "points": 126,
+        "rebounds": 45,
+        "assists": 7,
+        "steals": 6,
+        "blocks": 8
       },
       {
         "player_id": "4222252",
@@ -1175,18 +1206,6 @@
         "assists": 29,
         "steals": 6,
         "blocks": 1
-      },
-      {
-        "player_id": "6583",
-        "player_name": "Anthony Davis",
-        "team": "Washington Wizards",
-        "team_abbreviation": "WSH",
-        "games": 3,
-        "points": 91,
-        "rebounds": 31,
-        "assists": 5,
-        "steals": 4,
-        "blocks": 2
       }
     ],
     "assists": [
@@ -1201,6 +1220,18 @@
         "assists": 47,
         "steals": 1,
         "blocks": 2
+      },
+      {
+        "player_id": "4845367",
+        "player_name": "Stephon Castle",
+        "team": "San Antonio Spurs",
+        "team_abbreviation": "SA",
+        "games": 4,
+        "points": 88,
+        "rebounds": 23,
+        "assists": 38,
+        "steals": 4,
+        "blocks": 0
       },
       {
         "player_id": "5142620",
@@ -1225,18 +1256,6 @@
         "assists": 29,
         "steals": 6,
         "blocks": 1
-      },
-      {
-        "player_id": "4845367",
-        "player_name": "Stephon Castle",
-        "team": "San Antonio Spurs",
-        "team_abbreviation": "SA",
-        "games": 3,
-        "points": 68,
-        "rebounds": 17,
-        "assists": 29,
-        "steals": 4,
-        "blocks": 0
       },
       {
         "player_id": "4277905",
@@ -1299,15 +1318,15 @@
         "blocks": 2
       },
       {
-        "player_id": "4433083",
-        "player_name": "Cam Spencer",
-        "team": "Memphis Grizzlies",
-        "team_abbreviation": "MEM",
+        "player_id": "3995",
+        "player_name": "Jrue Holiday",
+        "team": "Portland Trail Blazers",
+        "team_abbreviation": "POR",
         "games": 4,
-        "points": 58,
-        "rebounds": 8,
-        "assists": 25,
-        "steals": 3,
+        "points": 64,
+        "rebounds": 19,
+        "assists": 26,
+        "steals": 8,
         "blocks": 0
       }
     ]
@@ -1325,9 +1344,9 @@
       "team": "San Antonio Spurs",
       "abbreviation": "SA",
       "wins": 3,
-      "losses": 0,
-      "points_for": 361,
-      "points_against": 310
+      "losses": 1,
+      "points_for": 472,
+      "points_against": 426
     },
     {
       "team": "Memphis Grizzlies",
@@ -1356,10 +1375,10 @@
     {
       "team": "Portland Trail Blazers",
       "abbreviation": "POR",
-      "wins": 2,
+      "wins": 3,
       "losses": 1,
-      "points_for": 348,
-      "points_against": 322
+      "points_for": 464,
+      "points_against": 433
     },
     {
       "team": "Atlanta Hawks",
