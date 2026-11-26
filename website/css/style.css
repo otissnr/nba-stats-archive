@@ -1,0 +1,395 @@
+:root {
+    --background: #0b1120;
+    --surface: #151f32;
+    --surface-light: #1c2940;
+    --orange: #f28c28;
+    --orange-light: #ffad55;
+    --text: #f4f6fb;
+    --muted: #9ba9bd;
+    --border: rgba(255,255,255,0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.site-header {
+    min-height: 82px;
+    padding: 16px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background: rgba(11,17,32,0.95);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    font-size: 36px;
+}
+
+.brand h1 {
+    font-size: 19px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+.brand p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--orange-light);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 420px;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    background:
+        radial-gradient(ellipse at 80% 50%, rgba(242,140,40,0.16), transparent 40%),
+        linear-gradient(120deg, #111d32, #0b1120);
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-content {
+    max-width: 620px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin: 20px 0;
+}
+
+.hero h2 span {
+    color: var(--orange);
+}
+
+.hero-content p {
+    color: var(--muted);
+    max-width: 440px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.primary-button {
+    display: inline-block;
+    background: var(--orange);
+    color: #101827;
+    padding: 13px 23px;
+    border-radius: 6px;
+    font-weight: 750;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.primary-button:hover {
+    background: var(--orange-light);
+    transform: translateY(-2px);
+}
+
+.hero-ball {
+    font-size: clamp(130px, 22vw, 260px);
+    opacity: 0.9;
+    filter: drop-shadow(0 20px 40px rgba(242,140,40,0.2));
+    transform: rotate(-15deg);
+    margin-right: 5%;
+}
+
+/* OVERVIEW STATISTICS */
+
+.stats-overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    padding: 35px 8%;
+}
+
+.stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 23px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-number {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--orange-light);
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* CONTENT SECTIONS */
+
+.content-section {
+    padding: 65px 8%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.section-heading h2 {
+    font-size: 29px;
+    letter-spacing: -0.7px;
+    margin-top: 5px;
+}
+
+.section-heading > p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* SEASON CARDS */
+
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.season-card {
+    min-height: 115px;
+    padding: 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.season-card span {
+    font-size: 21px;
+    font-weight: 750;
+}
+
+.season-card small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.season-card:hover {
+    border-color: var(--orange);
+    background: var(--surface-light);
+    transform: translateY(-4px);
+}
+
+/* FEATURE CARDS */
+
+.feature-section {
+    background: #0e1728;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.feature-card {
+    padding: 25px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.feature-card:hover {
+    border-color: var(--orange);
+    transform: translateY(-3px);
+}
+
+.feature-icon {
+    font-size: 28px;
+}
+
+.feature-card h3 {
+    margin: 15px 0 8px;
+    font-size: 17px;
+}
+
+.feature-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 28px 8%;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+footer p + p {
+    margin-top: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav {
+        width: 100%;
+        overflow-x: auto;
+        gap: 22px;
+        padding-bottom: 5px;
+    }
+
+    .main-nav a {
+        white-space: nowrap;
+    }
+
+    .season-grid,
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-ball {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 370px;
+        padding: 55px 7%;
+    }
+
+    .hero-ball {
+        position: absolute;
+        right: -35px;
+        bottom: -15px;
+        opacity: 0.16;
+        font-size: 180px;
+    }
+
+    .stats-overview {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 25px 7%;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    .stat-number {
+        font-size: 25px;
+    }
+
+    .content-section {
+        padding: 45px 7%;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .season-grid,
+    .feature-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .season-card {
+        min-height: 95px;
+        padding: 15px;
+    }
+
+    .season-card span {
+        font-size: 17px;
+    }
+
+    .feature-card {
+        padding: 17px;
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101827">
+    <meta name="description" content="A historical NBA statistics archive covering the 2020-21 to 2026-27 seasons.">
+    <title>NBA Stats Archive</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="brand">
+        <span class="brand-icon">🏀</span>
+        <div>
+            <h1>NBA Stats Archive</h1>
+            <p>Every game. Every season. Every stat.</p>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#games">Games</a>
+        <a href="#players">Players</a>
+        <a href="#teams">Teams</a>
+        <a href="#seasons">Seasons</a>
+        <a href="#downloads">Downloads</a>
+    </nav>
+</header>
+
+<main>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">THE HISTORICAL NBA DATABASE</span>
+            <h2>Explore the game.<br><span>Discover the numbers.</span></h2>
+            <p>A growing archive of NBA games, player performances and team statistics.</p>
+            <a href="#seasons" class="primary-button">Explore the archive</a>
+        </div>
+        <div class="hero-ball">🏀</div>
+    </section>
+
+    <section class="stats-overview">
+        <div class="stat-card">
+            <span class="stat-number">7</span>
+            <span class="stat-label">Seasons</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">30</span>
+            <span class="stat-label">NBA Teams</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">9,500+</span>
+            <span class="stat-label">Games indexed</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">2020–27</span>
+            <span class="stat-label">Season coverage</span>
+        </div>
+    </section>
+
+    <section id="seasons" class="content-section">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">THE ARCHIVE</span>
+                <h2>Explore by season</h2>
+            </div>
+            <p>Select a season to explore its games, players and teams.</p>
+        </div>
+
+        <div class="season-grid" id="season-grid">
+            <div class="season-card"><span>2020–21</span></div>
+            <div class="season-card"><span>2021–22</span></div>
+            <div class="season-card"><span>2022–23</span></div>
+            <div class="season-card"><span>2023–24</span></div>
+            <div class="season-card"><span>2024–25</span></div>
+            <div class="season-card"><span>2025–26</span></div>
+            <div class="season-card"><span>2026–27</span></div>
+        </div>
+    </section>
+
+    <section class="content-section feature-section">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">EXPLORE THE DATA</span>
+                <h2>Inside the archive</h2>
+            </div>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card" id="games">
+                <span class="feature-icon">📊</span>
+                <h3>Game results</h3>
+                <p>Scores, schedules, venues and complete game records.</p>
+            </div>
+            <div class="feature-card" id="players">
+                <span class="feature-icon">🏆</span>
+                <h3>Player statistics</h3>
+                <p>Individual performances, box scores and season leaders.</p>
+            </div>
+            <div class="feature-card" id="teams">
+                <span class="feature-icon">🛡️</span>
+                <h3>Team statistics</h3>
+                <p>Offensive, defensive and team performance data.</p>
+            </div>
+            <div class="feature-card" id="downloads">
+		<span class="feature-icon">📥</span>
+    		<h3>Data downloads</h3>
+    		<p>Download the complete 2026–27 NBA statistics workbook.</p>
+    		<a href="downloads/NBA_2026-27.xlsx" download class="primary-button">
+        		Download Excel workbook
+    		</a>
+    		<p><small>Excel format · 22 MB · 12 worksheets</small></p>
+	    </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>NBA Stats Archive · Independent historical statistics project</p>
+    <p>Data collected from ESPN public statistics endpoints.</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
